@@ -393,7 +393,7 @@ You set the anycast MAC address on both switches in the MLAG pair.
 NVUE provides two commands to set the anycast MAC address globally. You can either:
 
 - Set the anycast MAC address to a value in the reserved range between 44:38:39:ff:00:00 and 44:38:39:ff:ff:ff. Be sure to use an address in this reserved range to prevent MAC address conflicts with other interfaces in the same bridged network.
-- Set an anycast MAC ID, from which Cumulus Linux derives the MAC address. You can specify a number between 1 and 65535. Cumulus Linux adds the number to the MAC address 44:38:39:ff:00:00 in hex. For example, if you specify 225, the anycast MAC address is 44:38:39:ff:00:FF.
+- Set an anycast MAC ID, from which Cumulus Linux derives the MAC address. You can specify a number between 1 and 65535. Cumulus Linux adds the number to the MAC address 44:38:39:ff:00:00 in hex. For example, if you specify 255, the anycast MAC address is 44:38:39:ff:00:FF.
 
 If you use Linux commands to configure the switch instead of NVUE, add the `address-virtual <anycast-mac>` option under every VLAN interface in the` /etc/network/interfaces` file. Cumulus Linux does not provide a global anycast MAC address or MAC ID option in the `/etc/network/interfaces` file.
 
