@@ -549,7 +549,7 @@ The route target import or export statement is in the format `route-target impor
 
 The NVUE commands are as follows:
 - To configure a route import statement: `nv set vrf <vrf> router bgp route-import from-evpn route-target <asn>:<vni>`
-- To configure a route export statement: `nv set vrf <vrf> router bgp route-export from-evpn route-target <asn>:<vni>`
+- To configure a route export statement: `nv set vrf <vrf> router bgp route-export to-evpn route-target <asn>:<vni>`
 
 {{%notice note%}}
 - EVPN symmetric mode supports downstream VNI with layer 3 VNIs and single VXLAN devices only.
