@@ -1339,7 +1339,7 @@ vlan20           10.2.10.1       239.1.1.1       *               03:13   Y 05:28
 
 ### FHR Stuck in the Registering Process
 
-When a multicast source starts, the FHR sends unicast PIM register messages from the <span class="a-tooltip">[RPF](## "Reverse Path Forwarding")</span> interface towards the source. After the RP receives the PIM register, it sends a `PIM register stop` message to the FHR to end the register process. If an issue occurs with this communication, the FHR becomes stuck in the registering process, which can result in high CPU (the FHR CPU generates and sends PIM register packets to the RP CPU).
+When a multicast source starts, the FHR sends unicast PIM register messages from the <span class="a-tooltip">[RPF](## "Reverse Path Forwarding")</span> interface towards the RP. After the RP receives the PIM register, it sends a `PIM register stop` message to the FHR to end the register process. If an issue occurs with this communication, the FHR becomes stuck in the registering process, which can result in high CPU (the FHR CPU generates and sends PIM register packets to the RP CPU).
 
 To assess this issue, review the FHR. You can see the output interface of `pimreg` here. If this does not change to an interface within a couple of seconds, it is possible that the FHR remains in the registering process.
 
