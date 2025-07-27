@@ -1118,11 +1118,11 @@ The examples below show the flow of traffic between server02 and server03:
 
 | Step 1 |  |
 |--------|--------|
-|{{< figure src = "/images/cumulus-linux/pim-mlag-citc-topology1.png" >}}| **1**. server02 sends traffic to leaf02.<br><br>**2**. leaf02 forwards traffic to leaf01 because the peerlink is a multicast router port.<br><br>**3**. spine01 receives a PIM register from leaf01, the DR.<br><br>**4**. leaf02 syncs the *,G table from leaf01 as an MLAG active-active peer. |
+|{{< figure src = "/images/cumulus-linux/pim-mlag-citc-topology1.png" >}}| **1**. server02 sends traffic to leaf02.<br><br>**2**. leaf02 forwards traffic to leaf01 because the peerlink is a multicast router port.<br><br>**3**. spine01 receives a PIM register from leaf01, the DR.<br><br>**4**. leaf02 syncs the S,G table from leaf01 as an MLAG active-active peer. |
 
 | Step 2 |  |
 |--------|--------|
-| {{< figure src = "/images/cumulus-linux/pim-mlag-citc-topology2.png" >}} | **1**. leaf02 has the *,G route indicating that it must forward traffic towards spine01.<br><br>**2**. Either leaf02 or leaf01 sends this traffic directly based on which MLAG switch receives it from the attached source.<br><br>**3**. In this case, leaf02 receives the traffic on the MLAG bond and forwards it directly upstream.|
+| {{< figure src = "/images/cumulus-linux/pim-mlag-citc-topology2.png" >}} | **1**. leaf02 has the S,G route indicating that it must forward traffic towards spine01.<br><br>**2**. Either leaf02 or leaf01 sends this traffic directly based on which MLAG switch receives it from the attached source.<br><br>**3**. In this case, leaf02 receives the traffic on the MLAG bond and forwards it directly upstream.|
 
 ### Configure PIM with MLAG
 
