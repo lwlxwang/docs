@@ -317,7 +317,7 @@ cumulus@switch:~$ nv set router nexthop group group1 via 192.168.0.21
 To add a destination IP match to the rule, you must delete the existing rule sequence:
 
 ```
-cumulus@switch:~$ nv router pbr map pbr-policy rule 3 match source-ip
+cumulus@switch:~$ nv unset router pbr map pbr-policy rule 3 match source-ip
 cumulus@switch:~$ nv unset router nexthop group group1 via 192.168.0.21
 cumulus@switch:~$ nv config apply
 ```
