@@ -133,7 +133,7 @@ cumulus@switch:~$ nv set router policy prefix-list SERVICE_IPS rule 1 action per
 cumulus@switch:~$ nv set router policy route-map ucmp-route-map rule 1 action permit 
 cumulus@switch:~$ nv set router policy route-map ucmp-route-map rule 1 match ip-prefix-list SERVICE_IPS
 cumulus@switch:~$ nv set router policy route-map ucmp-route-map rule 1 set ext-community-bw multipaths
-cumulus@switch:~$ nv set vrf default router bgp neighbor swp51 address-family ipv4-unicast policy outbound prefix-list SERVICE_IPS 
+cumulus@switch:~$ nv set vrf default router bgp neighbor swp51 address-family ipv4-unicast policy outbound route-map SERVICE_IPS 
 cumulus@switch:~$ nv config apply
 ```
 
