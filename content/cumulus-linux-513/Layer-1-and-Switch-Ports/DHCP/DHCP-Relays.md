@@ -427,6 +427,7 @@ cumulus@leaf01:~$ nv set service dhcp-relay6 RED interface downstream vlan10
 cumulus@leaf01:~$ nv set service dhcp-relay6 RED interface downstream vlan20
 cumulus@leaf01:~$ nv set service dhcp-relay6 RED interface upstream RED server-address 2001:db8:199::2
 cumulus@leaf01:~$ nv set service dhcp-relay6 RED interface upstream vlan4024_l3
+cumulus@leaf01:~$ nv set vrf RED router bgp address-family ipv6-unicast redistribute connected enable on
 cumulus@leaf01:~$ nv set vrf RED router bgp address-family ipv6-unicast route-export to-evpn enable on
 cumulus@leaf01:~$ nv config apply
 ```
