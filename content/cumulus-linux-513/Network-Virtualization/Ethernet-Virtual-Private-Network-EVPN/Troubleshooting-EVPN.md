@@ -907,7 +907,7 @@ To show that the neighbor table includes the EVPN arp-cache and that the IPv6-MA
 ```
 cumulus@leaf01:mgmt:~$ sudo vtysh
 ...
-leaf01# show evpn arp-cache vni 20 ip 10.1.20.105
+leaf01# show evpn arp-cache vni 20 ip 10.1.20.105[wrong example here, need IPv6-MAC entry instead of IPv4-MAC entry ??? it is a feedback]
 IP: 10.1.20.105
  Type: remote
  State: active
